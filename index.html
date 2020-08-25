@@ -4,6 +4,27 @@
 		<meta charset="utf-8">
 		<title>Template_eng</title>
 		<link href="project.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				/*popup position*/
+				$('#popup').css({left: ($(window).width() / 2) - 500})
+				$('#popup').css({top: ($(window).height() / 2) - 400})
+				
+				/*project button onclick function to open the popup menu and to play its corresponding animation*/
+				$('#projects').on('click',function(){
+					$('#blackscreen').animate({"opacity": "show"}, 500);
+					$('#popup').animate({"opacity": "show", width:"800", height:"600",left: ($(window).width() / 2) - 400, top: ($(window).height() / 2) - 300}, 500);
+				});
+				
+				/*function to close the popup menu and to play its corresponding animation*/
+				$('#blackscreen').on('click',function(){
+					$(this).animate({"opacity": "hide"}, 500);
+					$('#popup').animate({"opacity": "hide", width:"1000", height:"800", left: ($(window).width() / 2) - 500, top: ($(window).height() / 2) - 400}, 500);
+					
+				});
+			});
+		</script>
 	</head>
 	
 	<body>
@@ -14,6 +35,9 @@
 				<li id="contact" class="menuitem">Contact</li>
 				<li id="lang" class="menuitem">ENG</li>
 			</ul>
+		</div>
+		<div id="blackscreen"></div>
+		<div id="popup">
 		</div>
 		<p>a</p>
 		<p>a</p>
