@@ -11,18 +11,33 @@
 				$('#popup').css({left: ($(window).width() / 2) - 500})
 				$('#popup').css({top: ($(window).height() / 2) - 400})
 				
-				/*project button onclick function to open the popup menu and to play its corresponding animation*/
+				/*project button onclick function to open the popup menu and to play its corresponding animation also to reset the preview to default*/
 				$('#projects').on('click',function(){
+					$('#desc_text').html("");
+					$('#pre_picture').html("");
 					$('#blackscreen').animate({"opacity": "show"}, 500);
 					$('#popup').animate({"opacity": "show", width:"800", height:"600",left: ($(window).width() / 2) - 400, top: ($(window).height() / 2) - 300}, 500);
+					$('.popup_text').delay(500).animate({"opacity": "show"},500);
 				});
 				
 				/*function to close the popup menu and to play its corresponding animation*/
 				$('#blackscreen').on('click',function(){
-					$(this).animate({"opacity": "hide"}, 500);
-					$('#popup').animate({"opacity": "hide", width:"1000", height:"800", left: ($(window).width() / 2) - 500, top: ($(window).height() / 2) - 400}, 500);
-					
+					$('.popup_text').animate({"opacity": "hide"},500);
+					$(this).delay(500).animate({"opacity": "hide"}, 500);
+					$('#popup').delay(500).animate({"opacity": "hide", width:"1000", height:"800", left: ($(window).width() / 2) - 500, top: ($(window).height() / 2) - 400}, 500);
 				});
+				
+				/*functions to replace the preview of a project and to establish links between the project pages*/
+				/*ROYAL GAME OF UR*/
+				$('#ur').on("mouseover", function(){
+					$('#desc_text').html('egyszer volt holnem volt');
+					$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
+				});
+				
+				$('#ur').on("click", function(){
+					window.location = 'https://www.google.es/';
+				});
+				
 			});
 		</script>
 	</head>
@@ -38,6 +53,18 @@
 		</div>
 		<div id="blackscreen"></div>
 		<div id="popup">
+			<div id="project_list" class="popup_text">
+				<!--list for the project links-->
+				<ul>
+					<li id="ur" class="popup_item">Royal Game of Ur</li>
+				</ul>
+			</div>
+			
+			<div id="preview" class="popup_text">
+				<!--container for the chosen project's preview-->
+				<div id="pre_description"><p id="desc_text"></p></div>
+				<div id="pre_picture"></div>	
+			</div>
 		</div>
 		<p>a</p>
 		<p>a</p>
