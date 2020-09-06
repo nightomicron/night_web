@@ -2,21 +2,47 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Night - About</title>
+		<title>Night - Contact</title>
 		<link href="general.css" rel="stylesheet" type="text/css" media="all">
+		<link href="contact.css" rel="stylesheet" type="text/css" media="all">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
 				/*popup position*/
-				$('#popup').css({left: ($(window).width() / 2) - 500})
-				$('#popup').css({top: ($(window).height() / 2) - 400})
+				$('#popup').css({left: ($(window).width() / 2) - 500});
+				$('#popup').css({top: ($(window).height() / 2) - 400});
+				
+				/*phone position*/
+				$('#phone_icon').css({left: ($(window).width() / 3) - 230});
+				$('#phone_text').css({left: ($(window).width() / 3) - 220});
+				
+				/*email position*/
+				$('#email_icon').css({left: ($(window).width() / 3 * 2) - 170})
+				$('#email_text').css({left: ($(window).width() / 3 * 2) - 230});
 				
 				/*language menu functions*/
+				var lang_open = false;
+				
 				$('#lang').on('click',function(){
-					$('#lang_switch').animate({"opacity": "show"},200);
+					if(lang_open == false){
+						$('#lang_switch').animate({"opacity": "show"},200);
+						lang_open = true;
+					}else{
+						$('#lang_switch').animate({"opacity": "hide"},200);
+						lang_open = false;
+					}
 				});
 				$('#screen').on('click',function(){
-					$('#lang_switch').animate({"opacity": "hide"},200);
+					
+				});
+				
+				/*links*/
+				$('#about').on("click", function(){
+					window.location = 'index.html';
+				});
+				
+				$('#contact').on("click", function(){
+					window.location = 'contact.html';
 				});
 				
 				/*project button onclick function to open the popup menu and to play its corresponding animation also to reset the preview to default*/
@@ -27,15 +53,6 @@
 					$('#popup').animate({"opacity": "show", width:"800", height:"600",left: ($(window).width() / 2) - 400, top: ($(window).height() / 2) - 300}, 500);
 					$('.popup_text').delay(500).animate({"opacity": "show"},500);
 					$('#lang_switch').animate({"opacity": "hide"},200);
-				});
-				
-				/*links*/
-				$('#about').on("click", function(){
-					window.location = 'index.html';
-				});
-				
-				$('#contact').on("click", function(){
-					window.location = 'contact.html';
 				});
 				
 				/*function to close the popup menu and to play its corresponding animation*/
@@ -88,69 +105,11 @@
 		</div>
 		<div id="screen">
 			<!-- insert the content of the page here-->
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a efficitur nisi. Mauris ornare augue et metus laoreet dictum. Ut porttitor eu augue at lobortis. Morbi vestibulum rhoncus porttitor. Maecenas sagittis efficitur interdum. Sed lobortis velit a vulputate venenatis. Suspendisse potenti. Phasellus id felis nibh. Sed auctor sem in odio accumsan, vitae fringilla magna elementum. Aliquam nec lectus id lectus pulvinar consequat. Donec consectetur turpis vitae venenatis fringilla.</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
+			<p id="phone_text">Phone:<br>+36 70 349 0661</p>
+			<img id="phone_icon" src="pictures/phone.png" alt="phone icon" style="width:400px;height:300px;">
+			<p id="email_text">Email:<br>b.pinter481@gmail.com</p>
+			<img id="email_icon" src="pictures/email.png" alt="email icon" style="width:400px;height:300px;">
+			
 		</div>
 		
 	</body>

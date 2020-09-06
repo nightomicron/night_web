@@ -1,0 +1,35 @@
+
+#phone_icon{
+	position: absolute;
+	top: 250px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#phone_text{
+	position: absolute;
+	top: 50px;
+	font-size: 50px;
+	text-align: center;
+}
+
+#email_icon{
+	position: absolute;
+	top: 250px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#email_text{
+	position: absolute;
+	top: 50px;
+	font-size: 50px;
+	text-align: center;
+}
