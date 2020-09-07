@@ -4,19 +4,26 @@
 		<meta charset="utf-8">
 		<title>Night - About</title>
 		<link href="general.css" rel="stylesheet" type="text/css" media="all">
+		<link href="about.css" rel="stylesheet" type="text/css" media="all">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
+				
 				/*popup position*/
 				$('#popup').css({left: ($(window).width() / 2) - 500})
 				$('#popup').css({top: ($(window).height() / 2) - 400})
 				
 				/*language menu functions*/
+				var lang_open = false;
+				
 				$('#lang').on('click',function(){
-					$('#lang_switch').animate({"opacity": "show"},200);
-				});
-				$('#screen').on('click',function(){
-					$('#lang_switch').animate({"opacity": "hide"},200);
+					if(lang_open == false){
+						$('#lang_switch').animate({"opacity": "show"},200);
+						lang_open = true;
+					}else{
+						$('#lang_switch').animate({"opacity": "hide"},200);
+						lang_open = false;
+					}
 				});
 				
 				/*project button onclick function to open the popup menu and to play its corresponding animation also to reset the preview to default*/
@@ -48,12 +55,12 @@
 				/*functions to replace the preview of a project and to establish links between the project pages*/
 				/*ROYAL GAME OF UR*/
 				$('#ur').on("mouseover", function(){
-					$('#desc_text').html('egyszer volt holnem volt');
+					$('#desc_text').html('Lorem Ipsum Dolor Sit Amet');
 					$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
 				});
 				
 				$('#ur').on("click", function(){
-					window.location = 'https://www.google.es/';
+					window.location = 'ur.html';
 				});
 				
 			});
@@ -88,69 +95,14 @@
 		</div>
 		<div id="screen">
 			<!-- insert the content of the page here-->
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a efficitur nisi. Mauris ornare augue et metus laoreet dictum. Ut porttitor eu augue at lobortis. Morbi vestibulum rhoncus porttitor. Maecenas sagittis efficitur interdum. Sed lobortis velit a vulputate venenatis. Suspendisse potenti. Phasellus id felis nibh. Sed auctor sem in odio accumsan, vitae fringilla magna elementum. Aliquam nec lectus id lectus pulvinar consequat. Donec consectetur turpis vitae venenatis fringilla.</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
-			<p>a</p>
+			<h1 class="p_title">About Me</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, est vel lobortis vehicula, augue lacus luctus ligula, ac tincidunt libero sapien quis nunc. Nam nibh lectus, hendrerit eget tempor eu, blandit ac mauris. Etiam in pretium nisi, sed blandit nunc. In cursus leo et leo condimentum, quis luctus metus molestie. Aenean iaculis ultrices elit, ut fermentum nibh tincidunt porta. Donec hendrerit, nisi eleifend placerat faucibus, neque neque iaculis ante, vestibulum tincidunt lectus nibh id arcu.<br><br> Donec sollicitudin, dui et facilisis molestie, ipsum tellus mattis lorem, faucibus pharetra tellus felis nec ante. Sed faucibus auctor mi, vel eleifend nulla dignissim in. Praesent ornare lacus et massa malesuada, ac pretium erat dictum. Aliquam tempus nibh sit amet nulla maximus, feugiat pretium enim mattis. Nunc mauris elit, ullamcorper iaculis sollicitudin in, rutrum a lectus. Phasellus ultrices accumsan odio in consectetur. Aenean ut mi in tortor ultricies fringilla nec id nibh. Aliquam et augue mi. Sed sapien erat, iaculis vehicula purus placerat, auctor posuere magna. Praesent vel lacinia metus.
+			</p>
+			<h1 class="p_title">This Website</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, est vel lobortis vehicula, augue lacus luctus ligula, ac tincidunt libero sapien quis nunc. Nam nibh lectus, hendrerit eget tempor eu, blandit ac mauris. Etiam in pretium nisi, sed blandit nunc. In cursus leo et leo condimentum, quis luctus metus molestie. Aenean iaculis ultrices elit, ut fermentum nibh tincidunt porta. Donec hendrerit, nisi eleifend placerat faucibus, neque neque iaculis ante, vestibulum tincidunt lectus nibh id arcu. Donec sollicitudin, dui et facilisis molestie, ipsum tellus mattis lorem, faucibus pharetra tellus felis nec ante. Sed faucibus auctor mi, vel eleifend nulla dignissim in. Praesent ornare lacus et massa malesuada, ac pretium erat dictum. Aliquam tempus nibh sit amet nulla maximus, feugiat pretium enim mattis. Nunc mauris elit, ullamcorper iaculis sollicitudin in, rutrum a lectus. Phasellus ultrices accumsan odio in consectetur. Aenean ut mi in tortor ultricies fringilla nec id nibh. Aliquam et augue mi. Sed sapien erat, iaculis vehicula purus placerat, auctor posuere magna. Praesent vel lacinia metus.
+			</p>
 		</div>
 		
 	</body>

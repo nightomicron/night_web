@@ -2,23 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Night - Contact</title>
+		<title>Night - Ur</title>
 		<link href="general.css" rel="stylesheet" type="text/css" media="all">
-		<link href="contact.css" rel="stylesheet" type="text/css" media="all">
+		<link href="project.css" rel="stylesheet" type="text/css" media="all">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
+				
 				/*popup position*/
-				$('#popup').css({left: ($(window).width() / 2) - 500});
-				$('#popup').css({top: ($(window).height() / 2) - 400});
-				
-				/*phone position*/
-				$('#phone_icon').css({left: ($(window).width() / 3) - 230});
-				$('#phone_text').css({left: ($(window).width() / 3) - 220});
-				
-				/*email position*/
-				$('#email_icon').css({left: ($(window).width() / 3 * 2) - 170})
-				$('#email_text').css({left: ($(window).width() / 3 * 2) - 230});
+				$('#popup').css({left: ($(window).width() / 2) - 500})
+				$('#popup').css({top: ($(window).height() / 2) - 400})
 				
 				/*language menu functions*/
 				var lang_open = false;
@@ -33,15 +26,6 @@
 					}
 				});
 				
-				/*links*/
-				$('#about').on("click", function(){
-					window.location = 'index.html';
-				});
-				
-				$('#contact').on("click", function(){
-					window.location = 'contact.html';
-				});
-				
 				/*project button onclick function to open the popup menu and to play its corresponding animation also to reset the preview to default*/
 				$('#projects').on('click',function(){
 					$('#desc_text').html("");
@@ -50,6 +34,15 @@
 					$('#popup').animate({"opacity": "show", width:"800", height:"600",left: ($(window).width() / 2) - 400, top: ($(window).height() / 2) - 300}, 500);
 					$('.popup_text').delay(500).animate({"opacity": "show"},500);
 					$('#lang_switch').animate({"opacity": "hide"},200);
+				});
+				
+				/*links*/
+				$('#about').on("click", function(){
+					window.location = 'index.html';
+				});
+				
+				$('#contact').on("click", function(){
+					window.location = 'contact.html';
 				});
 				
 				/*function to close the popup menu and to play its corresponding animation*/
@@ -62,7 +55,7 @@
 				/*functions to replace the preview of a project and to establish links between the project pages*/
 				/*ROYAL GAME OF UR*/
 				$('#ur').on("mouseover", function(){
-					$('#desc_text').html('egyszer volt holnem volt');
+					$('#desc_text').html('Lorem Ipsum Dolor Sit Amet');
 					$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
 				});
 				
@@ -102,11 +95,26 @@
 		</div>
 		<div id="screen">
 			<!-- insert the content of the page here-->
-			<p id="phone_text">Phone:<br>+36 70 349 0661</p>
-			<img id="phone_icon" src="pictures/phone.png" alt="phone icon" style="width:400px;height:300px;">
-			<p id="email_text">Email:<br>b.pinter481@gmail.com</p>
-			<img id="email_icon" src="pictures/email.png" alt="email icon" style="width:400px;height:300px;">
-			
+			<h1 class="p_title">Royal Game of Ur</h1>
+			<div id="description">
+				<img id="project_picture" src="pictures/7.jpg" alt="project picture" style="width:400px;height:300px;">
+				<ul id="specs">
+					<li class="specs_list">Creator: Balázs Pintér</li>
+					<li class="specs_list">Language: English</li>
+					<li class="specs_list">Genre: Tabletop Game</li>
+					<li class="specs_list">Platform: Windows 7, Windows 8, Windows 10</li>
+					<li class="specs_list">Written in: Java</li>
+					<li class="specs_list">Requires: <a href="https://www.java.com/en/download/" target="_blank">Java Runtime Environment</a></li>
+					<li class="specs_list">Sourcecode: <a href="https://www.google.es/" target="_blank">Github</a></li>
+					<li class="specs_list">Download: <a href="https://www.google.es/" target="_blank">Mega</a> | <a href="https://www.google.es/" target="_blank">GoogleDrive</a></li>					
+				</ul>
+			</div>
+			<div id="description_long">
+				<h1 class="p_title">Description</h1>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, est vel lobortis vehicula, augue lacus luctus ligula, ac tincidunt libero sapien quis nunc. Nam nibh lectus, hendrerit eget tempor eu, blandit ac mauris. Etiam in pretium nisi, sed blandit nunc. In cursus leo et leo condimentum, quis luctus metus molestie. Aenean iaculis ultrices elit, ut fermentum nibh tincidunt porta. Donec hendrerit, nisi eleifend placerat faucibus, neque neque iaculis ante, vestibulum tincidunt lectus nibh id arcu. Donec sollicitudin, dui et facilisis molestie, ipsum tellus mattis lorem, faucibus pharetra tellus felis nec ante. Sed faucibus auctor mi, vel eleifend nulla dignissim in. Praesent ornare lacus et massa malesuada, ac pretium erat dictum. Aliquam tempus nibh sit amet nulla maximus, feugiat pretium enim mattis. Nunc mauris elit, ullamcorper iaculis sollicitudin in, rutrum a lectus. Phasellus ultrices accumsan odio in consectetur. Aenean ut mi in tortor ultricies fringilla nec id nibh. Aliquam et augue mi. Sed sapien erat, iaculis vehicula purus placerat, auctor posuere magna. Praesent vel lacinia metus.
+				</p>
+			</div>
 		</div>
 		
 	</body>
