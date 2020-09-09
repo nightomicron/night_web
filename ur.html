@@ -66,6 +66,25 @@
 					window.location = 'ur.html';
 				});
 				
+				/*function to slide the pictures periodically*/
+				var s = $('#slider').find('#slider_pictures');
+				var position = 0;
+				s.find('#slider_first').clone().appendTo(s);
+				
+				setInterval(slide,4000);
+				
+				function slide(){
+					if(position<3){
+						s.animate({'top':'-=300px'},400);
+						position++;
+					
+					}else{
+						s.css('top','0');
+						position = 1;
+						s.animate({'top':'-=300px'},400);
+					}
+					
+				}
 			});
 		</script>
 	</head>
@@ -100,7 +119,13 @@
 			<!-- insert the content of the page here-->
 			<h1 class="p_title">Royal Game of Ur</h1>
 			<div id="description">
-				<img id="project_picture" src="pictures/7.jpg" alt="project picture" style="width:400px;height:300px;">
+				<div id="slider" style="width:400px;height:300px;">
+					<ul id="slider_pictures">
+						<li id="slider_first"><img src="pictures/7.jpg" alt="project picture" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/6.jpg" alt="project picture" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/5.jpg" alt="project picture" style="width:400px;height:300px;"></li>
+					</ul>
+				</div>
 				<ul id="specs">
 					<li class="specs_list">Creator: Balázs Pintér</li>
 					<li class="specs_list">Language: English</li>
