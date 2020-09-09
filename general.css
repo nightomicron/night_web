@@ -1,7 +1,15 @@
 
 body {
-	background: rgba(217, 235, 255, 1);
+	/*background: rgba(217, 235, 255, 1);*/
 	font-family : "century gothic", "Lucida Sans Unicode", Arial;
+}
+
+h1{
+	text-shadow: 1.5px 1.5px grey;
+}
+
+p{
+	font-size: 18px;
 }
 
 /*header-menu beginning*/
@@ -16,6 +24,7 @@ body {
 	color: white;
 	line-height: 50px;
 	font-size: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .menuitem{

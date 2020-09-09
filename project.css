@@ -1,18 +1,18 @@
 #screen{
-	margin-left: 100px;
-	margin-right: 100px;
+	left: 100px;
 }
 
 #description{
 	position: absolute;
 	top: 100px;
-	width: 1133px;
+	width: 1166px;
 }
 
 #project_picture{
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #specs{
@@ -21,6 +21,7 @@
 	left: 450px;
 	list-style-type: none;
 	margin: 0px;
+	font-size: 18px;
 }
 
 .specs_list{
@@ -40,5 +41,5 @@ a:hover{
 #description_long{
 	position: absolute;
 	top: 450px;
-	width: 1133px;
+	width: 1166px;
 }
