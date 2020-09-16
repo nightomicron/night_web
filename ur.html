@@ -6,87 +6,8 @@
 		<link href="general.css" rel="stylesheet" type="text/css" media="all">
 		<link href="project.css" rel="stylesheet" type="text/css" media="all">
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				
-				/*special project screen position*/
-				$('#screen').css({left: ($(window).width() / 2) - 583});
-				
-				/*popup position*/
-				$('#popup').css({left: ($(window).width() / 2) - 500});
-				$('#popup').css({top: ($(window).height() / 2) - 400});
-				
-				/*language menu functions*/
-				var lang_open = false;
-				
-				$('#lang').on('click',function(){
-					if(lang_open == false){
-						$('#lang_switch').animate({"opacity": "show"},200);
-						lang_open = true;
-					}else{
-						$('#lang_switch').animate({"opacity": "hide"},200);
-						lang_open = false;
-					}
-				});
-				
-				/*project button onclick function to open the popup menu and to play its corresponding animation also to reset the preview to default*/
-				$('#projects').on('click',function(){
-					$('#desc_text').html("");
-					$('#pre_picture').html("");
-					$('#blackscreen').animate({"opacity": "show"}, 500);
-					$('#popup').animate({"opacity": "show", width:"800", height:"600",left: ($(window).width() / 2) - 400, top: ($(window).height() / 2) - 300}, 500);
-					$('.popup_text').delay(500).animate({"opacity": "show"},500);
-					$('#lang_switch').animate({"opacity": "hide"},200);
-				});
-				
-				/*links*/
-				$('#about').on("click", function(){
-					window.location = 'index.html';
-				});
-				
-				$('#contact').on("click", function(){
-					window.location = 'contact.html';
-				});
-				
-				/*function to close the popup menu and to play its corresponding animation*/
-				$('#blackscreen').on('click',function(){
-					$('.popup_text').animate({"opacity": "hide"},500);
-					$(this).delay(500).animate({"opacity": "hide"}, 500);
-					$('#popup').delay(500).animate({"opacity": "hide", width:"1000", height:"800", left: ($(window).width() / 2) - 500, top: ($(window).height() / 2) - 400}, 500);
-				});
-				
-				/*functions to replace the preview of a project and to establish links between the project pages*/
-				/*ROYAL GAME OF UR*/
-				$('#ur').on("mouseover", function(){
-					$('#desc_text').html('Lorem Ipsum Dolor Sit Amet');
-					$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
-				});
-				
-				$('#ur').on("click", function(){
-					window.location = 'ur.html';
-				});
-				
-				/*function to slide the pictures periodically*/
-				var s = $('#slider').find('#slider_pictures');
-				var position = 0;
-				s.find('#slider_first').clone().appendTo(s);
-				
-				setInterval(slide,4000);
-				
-				function slide(){
-					if(position<3){
-						s.animate({'top':'-=300px'},400);
-						position++;
-					
-					}else{
-						s.css('top','0');
-						position = 1;
-						s.animate({'top':'-=300px'},400);
-					}
-					
-				}
-			});
-		</script>
+		<script src="js/menu_eng.js"></script>
+		<script src="js/project.js"></script>
 	</head>
 	
 	<body>
@@ -117,18 +38,18 @@
 		</div>
 		<div id="screen">
 			<!-- insert the content of the page here-->
-			<h1 class="p_title">Royal Game of Ur</h1>
+			<h1 class="p_title">Royal Game of Ur v.0.9.b</h1>
 			<div id="description">
 				<div id="slider" style="width:400px;height:300px;">
 					<ul id="slider_pictures">
-						<li id="slider_first"><img src="pictures/7.jpg" alt="project picture" style="width:400px;height:300px;"></li>
-						<li><img src="pictures/6.jpg" alt="project picture" style="width:400px;height:300px;"></li>
-						<li><img src="pictures/5.jpg" alt="project picture" style="width:400px;height:300px;"></li>
+						<li id="slider_first"><img src="pictures/ur1.png" alt="project picture1" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/ur2.png" alt="project picture2" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/ur3.png" alt="project picture3" style="width:400px;height:300px;"></li>
 					</ul>
 				</div>
 				<ul id="specs">
 					<li class="specs_list">Creator: Balázs Pintér</li>
-					<li class="specs_list">Language: English</li>
+					<li class="specs_list">Language: Hungarian</li>
 					<li class="specs_list">Genre: Tabletop Game</li>
 					<li class="specs_list">Platform: Windows 7, Windows 8, Windows 10</li>
 					<li class="specs_list">Written in: Java</li>
@@ -140,7 +61,28 @@
 			<div id="description_long">
 				<h1 class="p_title">Description</h1>
 				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, est vel lobortis vehicula, augue lacus luctus ligula, ac tincidunt libero sapien quis nunc. Nam nibh lectus, hendrerit eget tempor eu, blandit ac mauris. Etiam in pretium nisi, sed blandit nunc. In cursus leo et leo condimentum, quis luctus metus molestie. Aenean iaculis ultrices elit, ut fermentum nibh tincidunt porta. Donec hendrerit, nisi eleifend placerat faucibus, neque neque iaculis ante, vestibulum tincidunt lectus nibh id arcu. Donec sollicitudin, dui et facilisis molestie, ipsum tellus mattis lorem, faucibus pharetra tellus felis nec ante. Sed faucibus auctor mi, vel eleifend nulla dignissim in. Praesent ornare lacus et massa malesuada, ac pretium erat dictum. Aliquam tempus nibh sit amet nulla maximus, feugiat pretium enim mattis. Nunc mauris elit, ullamcorper iaculis sollicitudin in, rutrum a lectus. Phasellus ultrices accumsan odio in consectetur. Aenean ut mi in tortor ultricies fringilla nec id nibh. Aliquam et augue mi. Sed sapien erat, iaculis vehicula purus placerat, auctor posuere magna. Praesent vel lacinia metus.
+					The royal game of ur is an ancient tabletop game. Both players have 5 pieces and they try to move their own pieces from the starting line to the finish line. 
+					The game table has 3 areas. The left row is the first player's row, the second is the middle zone and the third one belongs to the second player. 
+					<br><br>
+					Rules:
+					<br>
+					The rules are simple. Both player throw the die in their turns and then they move one of the five pieces they desire. If a piece collides with another, the new one eats the old one. 
+					This means the new piece remains on the field, and the old one gets returned to the owner. Be careful because your pieces can be eaten by your own pieces. In the middle zone 
+					both of the players' pieces move on the same field which makes the progress even harder. Once a piece reaches the bottom they enter the final section the last two fields before the finish. 
+					A piece can only cross the finish line if the score of the die matches the remaining fields. This means if your piece is 4 steps away from the finish, it can only cross it if you throw a 4. 
+					If you throw a 5 in this case, your piece cant finish in that turn. Once a piece finishes, you are not able to use it anymore. It will become your trophy.
+					<br><br>
+					You win if all of your pieces finished the course successfully. Oh and I almost forgot to mention, if you touch a field that has a circle symbol, that means you get an extra turn. Have fun!
+					<br><br>
+					Notes:
+					<br>
+					With this project I wanted to practice canvas, it is one of my very first projects.
+					<br>
+					<br>
+					Known bugs:
+					<br>
+					After the 1st player wins the game, the game will let the 2nd player to do one more turn.<br>
+					If the user moves or resizes the window, the board will fall apart due to the canvas.
 				</p>
 			</div>
 		</div>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Night - Ur</title>
+		<link href="general.css" rel="stylesheet" type="text/css" media="all">
+		<link href="project.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/menu_hun.js"></script>
+		<script src="js/project.js"></script>
+	</head>
+	
+	<body>
+		<!--header menu-->
+		<div id="menu">
+			<ul>
+				<li id="about" class="menuitem">Rólam</li>
+				<li id="projects" class="menuitem">Projektek</li>
+				<li id="contact" class="menuitem">Kapcsolat</li>
+				<li id="lang" class="menuitem">HU</li>
+			</ul>
+		</div>
+		<div id="lang_switch">ENG</div>
+		<div id="blackscreen"></div>
+		<div id="popup">
+			<div id="project_list" class="popup_text">
+				<!--list for the project links-->
+				<ul>
+					<li id="ur" class="popup_item">Royal Game of Ur</li>
+				</ul>
+			</div>
+			
+			<div id="preview" class="popup_text">
+				<!--container for the chosen project's preview-->
+				<div id="pre_description"><p id="desc_text"></p></div>
+				<div id="pre_picture"></div>	
+			</div>
+		</div>
+		<div id="screen">
+			<!-- insert the content of the page here-->
+			<h1 class="p_title">Royal Game of Ur v.0.9.b</h1>
+			<div id="description">
+				<div id="slider" style="width:400px;height:300px;">
+					<ul id="slider_pictures">
+						<li id="slider_first"><img src="pictures/ur1.png" alt="project picture1" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/ur2.png" alt="project picture2" style="width:400px;height:300px;"></li>
+						<li><img src="pictures/ur3.png" alt="project picture3" style="width:400px;height:300px;"></li>
+					</ul>
+				</div>
+				<ul id="specs">
+					<li class="specs_list">Készítő: Pintér Baläzs</li>
+					<li class="specs_list">Nyelv: Magyar</li>
+					<li class="specs_list">Típus: Táblás Játék</li>
+					<li class="specs_list">Platform: Windows 7, Windows 8, Windows 10</li>
+					<li class="specs_list">Használt nyelv: Java</li>
+					<li class="specs_list">Szükséges: <a href="https://www.java.com/en/download/" target="_blank">Java Runtime Environment</a></li>
+					<li class="specs_list">Forráskód: <a href="https://www.google.es/" target="_blank">Github</a></li>
+					<li class="specs_list">Letöltés: <a href="https://www.google.es/" target="_blank">Mega</a> | <a href="https://www.google.es/" target="_blank">GoogleDrive</a></li>					
+				</ul>
+			</div>
+			<div id="description_long">
+				<h1 class="p_title">Leírás</h1>
+				<p>
+					A Royal Game of Ur egy ősi táblás játék. Minkét játékosnak 5 bábuja van és a starttól a célig mozgatják őket. 
+					A tábla 3 részből áll. A bal oszlop az első játékosé, a középső a közös részleg, és a jobb oldali pedig a második játékosé.
+					<br><br>
+					Szabályok:
+					<br>
+					Mindkét játékos a saját körében dob, majd valamelyik bábuját mozgatja előre, ha tudja. Ha az egyik bábu rálép a másikra, akkor az újabb bábu megeszi az előzőt. 
+					Ez azt jelenti, hogy a régi bábu vissza kerül a gazdája kezébe, míg az új a táblán marad. Vigyázat, a játékosok a saját bábujukat is megehetik. A közös területen már 
+					mind a kettő játékos bábui együtt mozognak így a bábulevétel esélye is megnő. Amikor egy figura eléri az alsó részt, ismét bekerül a játékos zónájába. Innen már csak két lépés a cél. 
+					Figyelem, a célvonalat csak akkor lehet átlépni, ha pontosan annyit dob a játékos, ahány lépés maradt a célig. Tehát ha 4 lépés maradt, akkor 4-et kell dobnia. Ha például 5-öt dob, akkor nem mozdulhat az a bábu. 
+					Ha egy figura beért a célba, onnantól kezdve az a játékos trófeája lesz.
+					<br><br>
+					Az a játékos nyer akinek először ér célba az összes bábuja. Oh és majdnem elfelejtettem, ha egy karikás mezőre kerül a bábu, akkor az egy extra kört ér. Jó szórakozást!
+					<br><br>
+					Jegyzet:
+					<br>
+					Ezzel a projekttel a canvas használatát gyakoroltam, ez az egyik legelső projektem.
+					<br>
+					<br>
+					Ismert hibák:
+					<br>
+					Ha az első játékos nyer, a játék folytatódik addig amíg a második játékos is lép egyet.<br>
+					Ha a felhasználó mozgatja, vagy átméretezi az ablakot, akkor a pálya szét fog esni a canvas miatt.
+				</p>
+			</div>
+		</div>
+		
+	</body>
+
+</html>
