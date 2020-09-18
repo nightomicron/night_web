@@ -50,8 +50,8 @@ $(document).ready(function() {
 	/*functions to replace the preview of a project and to establish links between the project pages*/
 	/*ROYAL GAME OF UR*/
 	$('#ur').on("mouseover", function(){
-		$('#desc_text').html('Lorem Ipsum Dolor Sit Amet');
-		$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
+		$('#desc_text').html('The Royal Game of Ur is an ancient tabletop game that tests your luck and logics. Grab five pieces and help them to reach the finish line!<br><br>Will you be able to dominate the board to crush your friends?<br><br>Important: The game is played by two players');
+		$('#pre_picture').html('<img src="pictures/ur2.png" alt="test_picture" style="width:250px;height:250px;">');
 	});
 				
 	$('#ur').on("click", function(){

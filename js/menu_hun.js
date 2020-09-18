@@ -50,8 +50,8 @@ $(document).ready(function() {
 	/*functions to replace the preview of a project and to establish links between the project pages*/
 	/*ROYAL GAME OF UR*/
 	$('#ur').on("mouseover", function(){
-		$('#desc_text').html('Lorem Ipsum Dolor Sit Amet');
-		$('#pre_picture').html('<img src="pictures/7.jpg" alt="test_picture" style="width:250px;height:250px;">');
+		$('#desc_text').html('A Royal Game of Ur egy ősi társasjáték, amely próbára teszi a logikát és a szerencsét. Fogj öt bábut és kísérd el őket a célvonalba!<br><br>Képes leszel uralni a táblát és eltiporni az ellenfeleid?<br><br>Fontos: A játékhoz 2 játékos szükséges');
+		$('#pre_picture').html('<img src="pictures/ur2.png" alt="test_picture" style="width:250px;height:250px;">');
 	});
 				
 	$('#ur').on("click", function(){
