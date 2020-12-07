@@ -1,85 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Night - About - HUN</title>
+		<title>Project Night</title>
 		<link href="general.css" rel="stylesheet" type="text/css" media="all">
-		<link href="about.css" rel="stylesheet" type="text/css" media="all">
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/menu_hun.js"></script>
+		<meta charset="utf-8">
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/angular-animate.js"></script>
 	</head>
 	
-	<body>
-		<!--header menu-->
-		<div id="menu">
-			<ul>
-				<li id="about" class="menuitem">Rólam</li>
-				<li id="projects" class="menuitem">Projektek</li>
-				<li id="contact" class="menuitem">Kapcsolat</li>
-				<li id="lang" class="menuitem">HU</li>
+	<body ng-app="nightApp" ng-controller="nightCtrl">
+		<!-- menu bar that holds the menu buttons -->
+		<div id="menu_bar">
+			<ul id="menu_buttons">
+				<a href="#/!" class="menu_link"><li id="about" class="menuitem">Rólam</li></a>
+				<li id="projects" class="menuitem" ng-click="showDiv = true">Projektek</li>
+				<a href="#!notready" class="menu_link"><li id="opinions" class="menuitem">Vélemények</li></a>
+				<a href="#!contact" class="menu_link"><li id="contact" class="menuitem">Kapcsolat</li></a>
+				<a href="index.html" class="menu_link"><li id="lang" class="menuitem">EN</li></a>
 			</ul>
 		</div>
-		<div id="lang_switch">ENG</div>
-		<div id="blackscreen"></div>
-		<div id="popup">
-			<div id="project_list" class="popup_text">
-				<!--list for the project links-->
-				<ul>
-					<li id="ur" class="popup_item">Royal Game of Ur</li>
-				</ul>
-			</div>
-			
-			<div id="preview" class="popup_text">
-				<!--container for the chosen project's preview-->
-				<div id="pre_description"><p id="desc_text"></p></div>
-				<div id="pre_picture"></div>	
+		
+		<div class="blackscreen" ng-hide="!showDiv" ng-click="showDiv = false"></div> <!--blackish background of the popup menu-->
+		
+		<!-- popup menu -->
+		<div class="popup_screen" ng-hide="!showDiv" ng-click="showDiv = false">
+			<div id="popup">
+				<div id="project_list" class="popup_text">
+					<!--list for the project links-->
+					<ul>
+						<a href="#!ur" class="menu_link" ng-mouseenter="prevUr()"><li id="ur" class="popup_item">Royal Game of Ur</li></a>
+						<a href="#!egghead" class="menu_link" ng-mouseenter="prevEgg()"><li id="wwtbae" class="popup_item">Legyél Te is Tojásfej</li></a>
+					</ul>
+				</div>
+				<img src={{prevpic}} alt="placeholder" id="p_pic">
 			</div>
 		</div>
+		
+		
+		<!-- Everything on the website apart from the menus is inside the screen -->
 		<div id="screen">
-			<!-- insert the content of the page here-->
-			<h1 class="p_title">Rólam</h1>
-			<p>
-				Kedves látogató, a nevem Pintér Balázs, egy fiatal magyar aki szoftver- és / vagy webfejlesztő szeretne lenni.
-				<br><br>
-				Az idén végeztem a Szegedi Tudomány Egyetem informatika szakán, és jelenleg állást keresek. 
-				Érdekel mind a back-end és front-end fejlesztés, a design, az adatbázisok és a tesztelés. 
-				Folyékonyan beszélek angolul és természetesen magyarul is, mind a kettőt napi szinten használom. 
-				Szeretek összetett problémákat egyszerű megoldásokká alakítani miközben újabb kódolási, tervezési módszereket tanulok, hogy a munka a jövőben egyre könnyebb és gyorsabb legyen. 
-				<br><br>
-				A célom, hogy professzionális szoftver- vagy / és webfejlesztő legyek miközben a tudásomat is gyarapítom az informatika terén. Hiszem, hogy 
-				a lelkes motivációmmal, szorgalmammal és a végtelen tanulási vágyamnak köszönhetően a közel jövőben képes leszek ezt elérni. 
-				<br><br>
-				Jelenlegi tudásom és érdeklődéseim:
-				<ul>
-					<li>Java</li>
-					<li>JavaScript</li>
-					<li>JQuery</li>
-					<li>HTML and CSS</li>
-					<li>PHP</li>
-					<li>MySQL</li>
-					<li>Drupal</li>
-					<li>Verzió kezelés: Git</li>
-				</ul>
-			</p>
-			<h1 class="p_title">A weboldalról</h1>
-			<p>
-				A weboldal a része a nagy projektemnek, amivel nem csak szinten tudom magam tartani, hanem még új tudást, tapasztalatot, és rutint is tudok szerezni. 
-				Ezt a weboldalt fogom használni arra, hogy ide töltsem fel a projektjeimet, mint egy portfólió avagy egy személyes "sourceforge" miközben új tartalmakon dolgozom.
-				<br><br>
-				A weboldalt HTML, JavaScript - JQuery és CSS stíluslapokat használva hoztam létre. Sajnos az oldal MÉG nem responzív és így a minimum felbontást 
-				1366 x 768-ra korlátoztam. 
-				<br>
-				Célok a jövőben:
-				<ul>
-					<li>Reszponzivitás</li>
-					<li>Több tartalom</li>
-					<li>Több stílus</li>
-					<li>Vendégkönyv</li>
-					<li>Funkció a képek nagyítására</li>
-					<li>Hírek részleg</li>
-				</ul>
-			</p>
+			
+			<!-- content of the page goes here -->
+			<div id="content" ng-view></div>
 		</div>
+		
+		<script src="js/nightController_hun.js"></script>
 		
 	</body>
 

@@ -1,70 +1,32 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Night - Ur</title>
-		<link href="general.css" rel="stylesheet" type="text/css" media="all">
-		<link href="project.css" rel="stylesheet" type="text/css" media="all">
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/menu_eng.js"></script>
-		<script src="js/project.js"></script>
-	</head>
-	
-	<body>
-		<!--header menu-->
-		<div id="menu">
-			<ul>
-				<li id="about" class="menuitem">About</li>
-				<li id="projects" class="menuitem">Projects</li>
-				<li id="contact" class="menuitem">Contact</li>
-				<li id="lang" class="menuitem">ENG</li>
-			</ul>
-		</div>
-		<div id="lang_switch">HU</div>
-		<div id="blackscreen"></div>
-		<div id="popup">
-			<div id="project_list" class="popup_text">
-				<!--list for the project links-->
-				<ul>
-					<li id="ur" class="popup_item">Royal Game of Ur</li>
-				</ul>
-			</div>
-			
-			<div id="preview" class="popup_text">
-				<!--container for the chosen project's preview-->
-				<div id="pre_description"><p id="desc_text"></p></div>
-				<div id="pre_picture"></div>	
-			</div>
-		</div>
-		<div id="screen">
-			<!-- insert the content of the page here-->
-			<h1 class="p_title">Royal Game of Ur v.0.9.b</h1>
-			<div id="description">
-				<div id="slider" style="width:400px;height:300px;">
-					<ul id="slider_pictures">
-						<li id="slider_first"><img src="pictures/ur1.png" alt="project picture1" style="width:400px;height:300px;"></li>
-						<li><img src="pictures/ur2.png" alt="project picture2" style="width:400px;height:300px;"></li>
-						<li><img src="pictures/ur3.png" alt="project picture3" style="width:400px;height:300px;"></li>
-					</ul>
+<h1>Royal Game of Ur v.0.9.b</h1>
+				<div class="img_project_holder">
+					<img src="pics/ur1.png" alt="placeholder" class="img_project">
+					<div class="shadow"></div>
+				</div>
+				<div class="img_project_holder">
+					<img src="pics/ur2.png" alt="placeholder" class="img_project">
+					<div class="shadow"></div>
+				</div>
+				<div class="img_project_holder">
+					<img src="pics/ur3.png" alt="placeholder" class="img_project">
+					<div class="shadow"></div>
 				</div>
 				<ul id="specs">
 					<li class="specs_list">Creator: Balázs Pintér</li>
 					<li class="specs_list">Language: Hungarian</li>
 					<li class="specs_list">Genre: Tabletop Game</li>
-					<li class="specs_list">Platform: Windows 7, Windows 8, Windows 10</li>
+					<li class="specs_list">Platform: Windows 7+</li>
 					<li class="specs_list">Written in: Java</li>
-					<li class="specs_list">Requires: <a href="https://www.java.com/en/download/" target="_blank">Java Runtime Environment</a></li>
+					<li class="specs_list">Requires: <a href="https://www.java.com/en/download/" target="_blank">Java RE</a></li>
 					<li class="specs_list">Sourcecode: <a href="https://github.com/nightomicron/Royal_Game_of_Ur" target="_blank">Github</a></li>
 					<li class="specs_list">Download: <a href="https://mega.nz/file/DhV0CQBA#KjL_pbEqNTI9ql-3UiuXZtmWRbEuLLDF2d1lJP7JDrc" target="_blank">Mega</a> | <a href="https://drive.google.com/file/d/1gTzShqhiBAqzGyywMwhdC2ds1TwBHuwx/view?usp=sharing" target="_blank">GoogleDrive</a></li>					
 				</ul>
-			</div>
-			<div id="description_long">
-				<h1 class="p_title">Description</h1>
-				<p>
+				<h1 id="project_desc">Description</h1>
+				<p id="project_p">
 					The royal game of ur is an ancient tabletop game. Both players have 5 pieces and they try to move their own pieces from the starting line to the finish line. 
 					The game table has 3 areas. The left row is the first player's row, the second is the middle zone and the third one belongs to the second player. 
 					<br><br>
-					Rules:
+					<b>Rules:</b>
 					<br>
 					The rules are simple. Both players throw the die in their turns and then they move one of the five pieces they desire. If a piece collides with another, the new one eats the old one. 
 					This means the new piece remains on the field, and the old one gets returned to the owner. Be careful because your pieces can be eaten by your own pieces. In the middle zone 
@@ -74,19 +36,13 @@
 					<br><br>
 					You win if all of your pieces finished the course successfully. Oh and I almost forgot to mention, if you touch a field that has a circle symbol, that means you get an extra turn. Have fun!
 					<br><br>
-					Notes:
+					<b>Notes:</b>
 					<br>
 					With this project I wanted to practice canvas, it is one of my very first projects.
 					<br>
 					<br>
-					Known bugs:
+					<b>Known bugs:</b>
 					<br>
 					After the 1st player wins the game, the game will let the 2nd player do one more turn.<br>
-					If the user moves or resizes the window, the board will fall apart due to the canvas.
+					If the user moves or resizes the window, the board will fall apart due to the canvas.<br><br>
 				</p>
-			</div>
-		</div>
-		
-	</body>
-
-</html>

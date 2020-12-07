@@ -1,30 +1,46 @@
-
 body {
-	/*background: rgba(217, 235, 255, 1);*/
-	font-family : "century gothic", "Lucida Sans Unicode", Arial;
+	background-color: #E7E7E7;
+	font-family: "Century Gothic", Arial, sans-serif;
+	text-color: black;
 }
 
-h1{
-	text-shadow: 1.5px 1.5px grey;
+.shadow{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 0;
+    left: 0;
 }
 
-p{
-	font-size: 18px;
-}
-
-/*header-menu beginning*/
-#menu{
-	position: fixed;
-	width: 100%;
-	height: 50px;
+#screen {
+	position: absolute;
+	min-width: 500px;
+	width: 50%;
+	min-height: 800px;
+	background-color: white;
 	top: 0px;
-	left: 0px;
-	background: rgba(48, 133, 230, 1);
-	text-align: center;
-	color: white;
-	line-height: 50px;
-	font-size: 20px;
+	left: 50%;
+	transform: translate(-50%);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+
+/*menubar start*/
+#menu_bar {
+	position: fixed;
+	min-width: 500px;
+	width: 50%;
+	height: 60px;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: #3085E6;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	line-height: 60px;
+	z-index: 1;
 }
 
 .menuitem{
@@ -42,66 +58,59 @@ p{
 	background: rgba(2, 93, 196, 1);
 }
 
-#about{
+#about {
 	position: absolute;
-	width: 120px;
-	height: 100%;
+	width: 100px;
+	height: 60px;
 	top: 0px;
 	left: 0px;
 	overflow: hidden;
 }
-#projects{
+
+#projects {
 	position: absolute;
-	width: 120px;
-	height: 100%;
+	width: 110px;
+	height: 60px;
 	top: 0px;
-	left: 121px;
+	left: 100px;
 	overflow: hidden;
 }
-#contact{
+
+#opinions {
 	position: absolute;
-	width: 120px;
-	height: 100%;
+	width: 140px;
+	height: 60px;
 	top: 0px;
-	left: 242px;
+	left: 210px;
 	overflow: hidden;
 }
+
+#contact {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	top: 0px;
+	left: 350px;
+	overflow: hidden;
+}
+
 #lang{
 	position: absolute;
 	width: 50px;
-	height: 100%;
+	height: 60px;
 	top: 0px;
 	right: 0px;
 	overflow: hidden;
 }
 
-#lang_switch{
-	position: fixed;
-	width: 50px;
-	height: 50px;
-	top: 50px;
-	right: 0px;
-	background: rgba(48, 133, 230, 1);
-	text-align: center;
+.menu_link{
 	color: white;
-	line-height: 50px;
-	transition: background 0.5s;
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-	display: none;
 }
-
-#lang_switch:hover{
-	background: rgba(2, 93, 196, 1);
-}
-/*header-menu ending*/
+/*menubar end*/
 
 /*project popup beginning*/
-#blackscreen{
+.blackscreen{
+	transition: all linear 0.5s;
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -109,19 +118,38 @@ p{
 	height: 100%;
 	background-color: black;
 	opacity: 0.9;
-	display: none;
+	/*display: none;*/
+	z-index: 3;
 }
+
+.popup_screen{
+	transition: all linear 0.5s;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	opacity: 1;
+	/*display: none;*/
+}
+
 #popup{
 	position: fixed;
-	width: 1000px;
+	width: 300px;
 	height: 800px;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%);
 	background-color: white;
-	opacity: 1;
-	display: none;
+}
+
+.ng-hide {
+	opacity: 0;
 }
 
 .popup_text{
-	display: none;
+	/*display: none;*/
 }
 
 #project_list{
@@ -130,7 +158,7 @@ p{
 	left: 0px;
 	background: rgba(48, 133, 230, 1);
 	width: 300px;
-	height: 100%;
+	height: 500px;
 	text-align: center;
 	color: white;
 	line-height: 50px;
@@ -160,47 +188,139 @@ p{
 	top: 0px;
 }
 
-#preview{
-	position: absolute;
-	top: 0px;
-	left: 300px;
-	width: 500px;
-	height: 100%;
-	background: rgba(217, 235, 255, 1);
+#wwtbae{
+	top: 50px;
 }
 
-#pre_description{
-	position: absolute;
-	top: 0px;
+#p_pic{
+	position: relative;
+	top: 500px;
 	left: 0px;
-	width: 500px;
+	width: 300px;
 	height: 300px;
-}
-
-#desc_text{
-	margin-left: 20px;
-	margin-right: 20px;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-	hyphens: auto;
-}
-
-#pre_picture{
-	position: absolute;
-	top: 300px;
-	left: 0px;
-	width: 500px;
-	height: 300px;
-	text-align: center;
-	line-height: 300px;
 }
 
 /*project popup ending*/
 
-/*screen div definition*/
-#screen{
+/*general content start*/
+#content {
+	position: relative;
+	top: 60px;
+	width: 100%;
+	
+}
+
+h1{
+	text-shadow: 1.5px 1.5px grey;
+	position: relative;
+	text-align: center;
+	border-bottom: 1px solid #c6c6c6;
+	margin-left: 50px;
+	margin-right: 50px;
+	background-color: #3085E6;
+	border-radius: 25px;
+	color: white;
+}
+/*general content end*/
+
+/*sbout start*/
+#img_container{
+	position: relative;
+	top: 200px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 400px;
+	box-shadow: 5px 10px 5px black inset;
+}
+
+.about_me{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+/*about end*/
+
+/*projects start*/
+.img_project_holder{
+	position: relative;
+	top: 0px;
+	margin-left: 50px;
+	margin-top: 50px;
+	width: 400px;
+	height: 400px;
+	float: left;
+}
+
+.img_project{
+	width: 400px;
+	height: 400px;
+}
+
+
+#specs{
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	margin-top: 50px;
+	font-size: 20px;
+	list-style-type: none;
+}
+
+.specs_list {
+	padding-bottom: 20px;
+}
+
+#project_desc{
+	position: relative;
+	top: 50px;
+	left: 50px;
+	width: 90%;
+	float: left;
+	margin-left: 0px;
+	
+}
+
+#project_p{
+	position: relative;
+	float: left;
+	margin: 50px;
+	font-size: 18px;
+}
+/*projects end*/
+
+/*contact start*/
+#contact_email{
 	position: absolute;
 	top: 50px;
-	left: 0px;
-	z-index:-1;
+	left: 50%;
+	transform: translate(-50%);
+	width: 300px;
+	height: 200px;
+	
+}
+
+#p_email{
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 30px;
+}
+
+#contact_phone{
+	position: absolute;
+	top: 350px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 300px;
+	height: 200px;
+	
+}
+
+#p_phone{
+	position: absolute;
+	top: 550px;
+	left: 50%;
+	transform: translate(-50%);
+	font-size: 30px;
 }
